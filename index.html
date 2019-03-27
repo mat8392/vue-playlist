@@ -125,6 +125,17 @@
             </div>
 
         </div>
+        <h1>Multiple Vue Instance</h1>
+        <div id="vue-app-one">
+            <h2>{{title}}</h2>
+            <p>{{greet}}</p>
+        </div>
+        <div id="vue-app-two">
+            <h2>{{title}}</h2>
+            <p>{{greet}}</p>
+            <button v-on:click="changeTitle">Change App one title</button>
+
+        </div>
         <script src="app.js"></script>
     </body>
 </html>

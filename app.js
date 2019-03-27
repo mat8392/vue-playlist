@@ -1,4 +1,4 @@
-new Vue({
+var first = new Vue({
     el: '#vue-app',
     data: {
         name: 'Nazrin',
@@ -81,3 +81,39 @@ new Vue({
             }
         }
 });
+
+var one = new Vue({
+    el: '#vue-app-one',
+    data: {
+        title: 'One'
+
+    },
+    methods:{
+    },
+    computed: {
+        greet: function() {
+            return 'Hello from one';
+        }
+    }
+});
+
+var two = new Vue({
+    el: '#vue-app-two',
+    data: {
+        title: 'Two'
+
+    },
+    methods:{
+        changeTitle: function() {
+            one.title = 'title change';
+        }
+
+    },
+    computed: {
+        greet: function() {
+            return 'Hello from two';
+        }
+    }
+});
+
+two.title = "Change from outside"
