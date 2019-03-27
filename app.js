@@ -1,4 +1,18 @@
-var one = new Vue({
+Vue.component('greeting', {
+    template: '<p>Hello. I am {{ name }}. <button v-on:click="changeName">Change Name</button></p> ',
+    data: function () {
+        return {
+            name: 'Yoshi'
+        }
+    },
+    methods: {
+        changeName: function () {
+            this.name = 'Mario';
+        }
+    }
+});
+
+new Vue({
     el: '#vue-app-one',
     data: {
 
@@ -10,7 +24,7 @@ var one = new Vue({
     }
 });
 
-var two = new Vue({
+new Vue({
     el: '#vue-app-two',
     data: {
 
@@ -22,5 +36,3 @@ var two = new Vue({
 
     }
 });
-
-two.title = "Change from outside"
