@@ -39,6 +39,7 @@ var first = new Vue({
         ],
         health: 100,
         ended: false,
+        output: 'Your fav food',
     },
     methods : {
         greet: function(time) {
@@ -74,7 +75,13 @@ var first = new Vue({
         restart: function() {
             this.health = 100;
             this.ended = false;
-        }
+        },
+        readRefs: function() {
+            console.log(this.$refs);
+            console.log(this.$refs.input.value);
+            console.log(this.$refs.test.innerHTML);
+            this.output = this.$refs.input.value;
+        },
     },
     computed: {
             addToA:function() {

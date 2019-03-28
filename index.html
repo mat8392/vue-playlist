@@ -124,6 +124,12 @@
                 <button v-on:click="restart">Restart</button>
             </div>
 
+            <h1>Refs</h1>
+             <input type="text" ref="input"/>
+             <button v-on:click="readRefs">Submit</button>
+             <p>Your Fav Food : {{ output }}</p>
+             <div ref="test">hello</div>
+
         </div>
         <h1>Multiple Vue Instance</h1>
         <div id="vue-app-one">
