@@ -1,3 +1,17 @@
+Vue.component('greeting', {
+    template: '<p>Hey. I am re-usable component. My Name is {{ componentName}}. <button v-on:click="changeComponentName">Change Name component</button></p>',
+    data: function () {
+        return {
+            componentName: 'Yoshi'
+        }
+    },
+    methods: {
+        changeComponentName: function () {
+            this.componentName = 'Mario';
+        }
+    }
+});
+
 var first = new Vue({
     el: '#vue-app',
     data: {
@@ -116,4 +130,12 @@ var two = new Vue({
     }
 });
 
-two.title = "Change from outside"
+two.title = "Change from outside";
+
+var three = new Vue({
+    el: '#vue-app-three',
+});
+
+var four = new Vue({
+    el: '#vue-app-four',
+});
